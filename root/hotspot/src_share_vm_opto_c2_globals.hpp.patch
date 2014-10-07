@@ -1,0 +1,46 @@
+diff -r af46576a8d7c src/share/vm/opto/c2_globals.hpp
+--- a/src/share/vm/opto/c2_globals.hpp	Thu Sep 18 13:28:15 2014 -0700
++++ b/src/share/vm/opto/c2_globals.hpp	Tue Oct 07 15:30:11 2014 +0100
+@@ -115,7 +115,7 @@
+   develop(intx, OptoPeepholeAt, -1,                                         \
+           "Apply peephole optimizations to this peephole rule")             \
+                                                                             \
+-  notproduct(bool, PrintIdeal, false,                                       \
++  product(bool, PrintIdeal, true,                                       \
+           "Print ideal graph before code generation")                       \
+                                                                             \
+   notproduct(bool, PrintOpto, false,                                        \
+@@ -170,7 +170,7 @@
+   notproduct(bool, PrintFrameConverterAssembly, false,                      \
+           "Print New compiler assembly output for frame converters")        \
+                                                                             \
+-  notproduct(bool, PrintParseStatistics, false,                             \
++  product(bool, PrintParseStatistics, true,                             \
+           "Print nodes, transforms and new values made per bytecode parsed")\
+                                                                             \
+   notproduct(bool, PrintOptoPeephole, false,                                \
+@@ -353,7 +353,7 @@
+   notproduct(ccstr, PrintIdealGraphAddress, "127.0.0.1",                    \
+           "IP address to connect to visualizer")                            \
+                                                                             \
+-  notproduct(ccstr, PrintIdealGraphFile, NULL,                              \
++  product(ccstr, PrintIdealGraphFile, "/tmp/ideal.xml",                              \
+           "File to dump ideal graph to.  If set overrides the "             \
+           "use of the network")                                             \
+                                                                             \
+@@ -473,13 +473,13 @@
+   develop(bool, ExitEscapeAnalysisOnTimeout, true,                          \
+           "Exit or throw assert in EA when it reaches time limit")          \
+                                                                             \
+-  notproduct(bool, PrintEscapeAnalysis, false,                              \
++  product(bool, PrintEscapeAnalysis, true,                              \
+           "Print the results of escape analysis")                           \
+                                                                             \
+   product(bool, EliminateAllocations, true,                                 \
+           "Use escape analysis to eliminate allocations")                   \
+                                                                             \
+-  notproduct(bool, PrintEliminateAllocations, false,                        \
++  product(bool, PrintEliminateAllocations, true,                        \
+           "Print out when allocations are eliminated")                      \
+                                                                             \
+   product(intx, EliminateAllocationArraySizeLimit, 64,                      \
