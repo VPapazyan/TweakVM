@@ -15,5 +15,5 @@ Ideas:
 
 Instructions:
 * Follow this gist to fetch OpenJDK9 and OpenJFX: https://gist.github.com/chriswhocodes/c5ca0766ded3046691f0
-* Apply the TweakVM patches using ./patch.sh `<path_to_openjdk>`
+* Apply the TweakVM patches using `./patch.sh <path_to_openjdk>`
 * Build OpenJDK using `make reconfigure clean images`
