@@ -13,7 +13,18 @@ Ideas:
 * Eliminated allocations
 * Code cache fragmentation visualiser
 
-Instructions:
-* Follow this gist to fetch OpenJDK9 and OpenJFX: https://gist.github.com/chriswhocodes/c5ca0766ded3046691f0
-* Apply the TweakVM patches using `./patch.sh <path_to_openjdk>`
-* Build OpenJDK using `make reconfigure clean images`
+Instructions (first time):
+`fetchOpenJDK.sh <OpenJDK destination>
+fetchOpenJavaFX.sh <OpenJavaFX destination>
+fetchGradle.sh (needed to build OpenJavaFX. Skip if already installed)
+applyTweakVMPatches.sh <OpenJDK dir>
+buildOpenJDK.sh <OpenJDK dir>
+buildOpenJavaFX.sh <OpenJavaFX dir>
+copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>`
+
+Instructions (subsequent builds):
+`updateOpenJDK.sh <OpenJDK destination>
+updateOpenJavaFX.sh <OpenJavaFX destination>
+applyTweakVMPatches.sh <OpenJDK dir>
+buildOpenJDK.sh <OpenJDK dir>
+copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>`
