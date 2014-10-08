@@ -14,17 +14,17 @@ Ideas:
 * Code cache fragmentation visualiser
 
 Instructions (first time):
-`fetchOpenJDK.sh <OpenJDK destination>
-fetchOpenJavaFX.sh <OpenJavaFX destination>
-fetchGradle.sh (needed to build OpenJavaFX. Skip if already installed)
-applyTweakVMPatches.sh <OpenJDK dir>
-buildOpenJDK.sh <OpenJDK dir>
-buildOpenJavaFX.sh <OpenJavaFX dir>
-copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>`
+`fetchOpenJDK.sh <OpenJDK destination>`
+`fetchOpenJavaFX.sh <OpenJavaFX destination>`
+`fetchGradle.sh (needed to build OpenJavaFX. Skip if already installed)`
+`applyTweakVMPatches.sh <OpenJDK dir>`
+`buildOpenJDK.sh <OpenJDK dir>`
+`buildOpenJavaFX.sh <OpenJavaFX dir>`
+`copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>`
 
 Instructions (subsequent builds):
-`updateOpenJDK.sh <OpenJDK destination>
-updateOpenJavaFX.sh <OpenJavaFX destination>
-applyTweakVMPatches.sh <OpenJDK dir>
-buildOpenJDK.sh <OpenJDK dir>
-copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>`
+`updateOpenJDK.sh <OpenJDK destination>`
+`updateOpenJavaFX.sh <OpenJavaFX destination>`
+`applyTweakVMPatches.sh <OpenJDK dir>`
+`buildOpenJDK.sh <OpenJDK dir>`
+`copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>`
