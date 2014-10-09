@@ -35,4 +35,4 @@ cd $1/hotspot
 echo "Patching in hotspot"
 for i in $PATCH_DIR/hotspot/*.patch; do patch -N -p1 < $i; done
 
-echo "Done. You can now build the changes with cd $1; make reconfigure clean images"
+echo "Done. You can now build the changes with ./buildOpenJDK.sh"

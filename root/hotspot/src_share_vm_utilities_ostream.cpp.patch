@@ -1,12 +1,11 @@
-diff -r af46576a8d7c src/share/vm/utilities/ostream.cpp
---- a/src/share/vm/utilities/ostream.cpp	Thu Sep 18 13:28:15 2014 -0700
-+++ b/src/share/vm/utilities/ostream.cpp	Tue Oct 07 17:07:33 2014 +0100
-@@ -850,6 +850,8 @@
+diff -r 8e576352f831 src/share/vm/utilities/ostream.cpp
+--- a/src/share/vm/utilities/ostream.cpp	Tue Oct 07 15:44:11 2014 -0700
++++ b/src/share/vm/utilities/ostream.cpp	Thu Oct 09 08:52:46 2014 +0100
+@@ -846,6 +846,7 @@
+              os::current_process_id(), (int64_t)time_ms);
+     // Write VM version header immediately.
+     xs->head("vm_version");
++    xs->print_cr("<TweakVM/>");
+     xs->head("name"); xs->text("%s", VM_Version::vm_name()); xs->cr();
      xs->tail("name");
      xs->head("release"); xs->text("%s", VM_Version::vm_release()); xs->cr();
-     xs->tail("release");
-+    xs->head("vendor"); xs->text("%s", VM_Version::vm_vendor()); xs->cr();
-+    xs->tail("vendor");
-     xs->head("info"); xs->text("%s", VM_Version::internal_vm_info_string()); xs->cr();
-     xs->tail("info");
-     xs->tail("vm_version");

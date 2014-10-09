@@ -17,7 +17,7 @@
 # 2 along with this work; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
-if [ $# -lt 1 ]; then
+if [ $# -lt 2 ]; then
   echo 1>&2 "Usage: copyOpenJavaFXToOpenJDK <path to OpenJavaFX> <path to OpenJDK>"
   exit 1;
 fi

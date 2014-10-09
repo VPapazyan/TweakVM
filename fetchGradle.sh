@@ -17,9 +17,19 @@
 # 2 along with this work; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
+if [ $# -lt 1 ]; then
+  echo 1>&2 "Usage: fetchGradle.sh <Gradle destination dir>"
+  exit 1;
+fi
+
+export GRADLE=$1
+
+mkdir $GRADLE
+
 #========================================
 # Fetch Gradle (if not already installed)
 #========================================
+cd $GRADLE
 wget http://services.gradle.org/distributions/gradle-1.8-all.zip
 unzip -o gradle-1.8-all.zip
-export PATH=$PATH:gradle-1.8/bin
+export PATH=$PATH:$GRADLE/gradle-1.8/bin
