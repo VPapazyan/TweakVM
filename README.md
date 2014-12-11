@@ -17,10 +17,10 @@ Instructions (first time):
 ```shell
 ./fetchOpenJDK.sh <OpenJDK destination>
 ./fetchOpenJavaFX.sh <OpenJavaFX destination>
-./fetchGradle.sh <Gradle destination>
+./fetchGradle.sh
 ./applyTweakVMPatches.sh <OpenJDK dir>
 ./buildOpenJDK.sh <OpenJDK dir>
-./buildOpenJavaFX.sh <OpenJavaFX dir> <Gradle dir>
+./buildOpenJavaFX.sh <OpenJavaFX dir>
 ./copyOpenJavaFXToOpenJDK.sh <OpenJavaFX dir> <OpenJDK dir>
 ```
 
