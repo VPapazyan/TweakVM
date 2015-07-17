@@ -18,15 +18,19 @@
 # Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
 if [ $# -lt 1 ]; then
-  echo 1>&2 "Usage: fetchOpenJavaFX.sh <OpenJavaFX destination dir>"
+  echo 1>&2 "Usage: buildOpenJFX.sh <OpenJFX dir>"
   exit 1;
 fi
 
 export OPENJFX=$1
 
-mkdir $OPENJFX
+#===========================================
+# Set up bootstrap JDK (1.8 needed)
+#===========================================
+#export JAVA_HOME=/home/chris/jdk1.8.0_40
 
 #=================
-# Fetch OpenJFX
+# Build OpenJFX
 #=================
-hg clone http://hg.openjdk.java.net/openjfx/8u-dev/rt $OPENJFX
+cd $OPENJFX
+gradle clean build

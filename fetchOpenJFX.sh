@@ -17,27 +17,16 @@
 # 2 along with this work; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
-if [ $# -lt 2 ]; then
-  echo 1>&2 "Usage: buildOpenJavaFX.sh <OpenJavaFX dir> <Gradle dir>"
+if [ $# -lt 1 ]; then
+  echo 1>&2 "Usage: fetchOpenJFX.sh <OpenJFX destination dir>"
   exit 1;
 fi
 
 export OPENJFX=$1
-export GRADLE=$2
 
-#===========================================
-# Set up bootstrap JDK (1.8 needed)
-#===========================================
-#export JAVA_HOME=/home/chris/jdk1.8.0_40
-
-#===========================================
-# Add Gradle bin directory to path if needed
-#===========================================
-export PATH=$PATH:$GRADLE/bin
+mkdir $OPENJFX
 
 #=================
-# Build OpenJFX
+# Fetch OpenJFX
 #=================
-cd $OPENJFX
-gradle clean
-gradle build
+hg clone http://hg.openjdk.java.net/openjfx/9-dev/rt/ $OPENJFX
