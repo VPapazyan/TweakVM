@@ -17,7 +17,7 @@ Instructions (first time):
 ```shell
 ./fetchOpenJDK.sh <OpenJDK destination>
 ./fetchOpenJavaFX.sh <OpenJavaFX destination>
-./fetchGradle.sh (needed to build OpenJavaFX. Skip if already installed)
+./fetchGradle.sh
 ./applyTweakVMPatches.sh <OpenJDK dir>
 ./buildOpenJDK.sh <OpenJDK dir>
 ./buildOpenJavaFX.sh <OpenJavaFX dir>
